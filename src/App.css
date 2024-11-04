@@ -1,38 +1,160 @@
+
+/* App.css */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Modal {
+  background: linear-gradient(135deg, #8A2BE2, #FF7F50);
+  padding: 30px;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+h2 {
+  color: #FF4500;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8em;
+}
+
+.question-container {
+  margin: 15px 0;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .question-container {
+    /* margin: 0; */
+    width: 100%;
+    text-align: left;
   }
 }
+
+
+
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1em;
+  background: #FFFFFF;
+  color: #333;
+}
+
+.submit-button {
+  background-color: #FF4500;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #8A2BE2;
+  color: #FF4500;
+}
+
+.Overlay {
+  background: url('./b2.avif') center/cover no-repeat, rgba(0, 0, 0, 0.7);
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #FF4500;
+  font-size: 1em;
+  margin-top: 5px;
+  background: #FFFFFF;
+  color: #333;
+}
+
+.animation-cen {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Landing Page */
+
+/* App.css */
+.landing-page {
+  position: relative;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.7);
+}
+
+.music-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.music-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.wishes {
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+}
+
+.wish {
+  font-size: 1.5em;
+  font-family: 'Dancing Script', cursive;
+  animation: fadeIn 2s ease;
+  margin: 30px 0;
+  font-weight: bolder;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

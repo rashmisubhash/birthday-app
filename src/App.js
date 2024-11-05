@@ -12,7 +12,7 @@ function App() {
   const [answers, setAnswers] = useState({ q1: '', q2: '' });
   const [error, setError] = useState('');
   const [showWishes, setShowWishes] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   const correctAnswers = {
     q1: 'A',
@@ -85,9 +85,9 @@ function App() {
           <div className='animation-cen'>
           <Lottie loop animationData={heartAnimation} play style={{ width: 100, height: 100, marginBottom: '20px', justifyContent: "center" }} />
           </div>
-          <h2 style={{ color: '#FF4500', fontFamily: "'Dancing Script', cursive" }}>Answer these to continue ❤️</h2>
+          <h2 style={{ color: '#FF4500', fontFamily: "'Dancing Script', cursive" }}>❤️❤️</h2>
           <div className="question-container">
-            <label>1. What's my favorite thing to do when I’m with you?</label>
+            <label>1. నీతో ఉంటే నచ్చిన పనేమిటో తెలుసా?</label>
             <select name="q1" value={answers.q1} onChange={handleAnswerChange} className="dropdown">
               <option value="">Select an answer</option>
               <option value="A">Watch movies</option>
@@ -97,7 +97,7 @@ function App() {
             </select>
           </div>
           <div className="question-container">
-            <label>2. What do I call you?</label>
+            <label>2. నేను నిన్ను ఏమని పిలుస్తాను?</label>
             <input
               type="text"
               name="q2"
